@@ -1,0 +1,20 @@
+﻿# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.BIN/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python / Script temp
+__pycache__/
+*.pyc
+resume_raw.txt
+resume_links.json
+fix_pdf_link.py
+
+# Env
+.env

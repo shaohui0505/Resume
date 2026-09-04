@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>王少辉 - 个人简历 | 运动健康AI产品经理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#1f4e79;
+    --primary-dark:#153a5c;
+    --primary-light:#e8f0f8;
+    --accent:#2e86c1;
+    --accent-2:#5dade2;
+    --text:#1c2833;
+    --text-soft:#4a5a6a;
+    --text-muted:#7b8a99;
+    --bg:#ffffff;
+    --bg-soft:#f4f7fb;
+    --border:#dce4ee;
+    --tag-bg:#eaf2fb;
+    --shadow:0 1px 2px rgba(20,40,70,.04), 0 8px 24px rgba(20,40,70,.06);
+    --radius:10px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:var(--bg-soft);color:var(--text);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",Manrope,sans-serif;-webkit-font-smoothing:antialiased;}
+  body{padding:32px 16px 64px;}
+  .page{
+    max-width:900px;margin:0 auto;background:var(--bg);
+    box-shadow:var(--shadow);border-radius:14px;overflow:hidden;
+  }
+  /* HEADER */
+  .header{
+    background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+    color:#fff;padding:34px 44px 28px;position:relative;overflow:hidden;
+  }
+  .header::after{
+    content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;
+    background:radial-gradient(circle,rgba(255,255,255,.12),transparent 60%);border-radius:50%;
+  }
+  .header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:1;}
+  .name-block h1{font-size:32px;font-weight:800;letter-spacing:.5px;line-height:1.15;font-family:"Noto Sans SC",sans-serif;}
+  .name-en{
+    display:inline-block;margin-top:6px;font-family:Manrope,sans-serif;font-size:15px;
+    font-weight:600;letter-spacing:2.5px;color:rgba(255,255,255,.82);
+    text-transform:uppercase;
+  }
+  .name-en a{color:inherit;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.6);padding-bottom:1px;}
+  .name-en a:hover{color:#fff;border-bottom-color:#fff;}
+  .title-tag{
+    display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+    background:rgba(255,255,255,.16);backdrop-filter:blur(6px);
+    padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;
+    border:1px solid rgba(255,255,255,.22);
+  }
+  .title-tag .dot{width:8px;height:8px;background:#7dcea0;border-radius:50%;box-shadow:0 0 0 3px rgba(125,206,160,.25);}
+  .profile-summary{
+    position:relative;z-index:1;margin-top:20px;font-size:14.5px;line-height:1.75;color:rgba(255,255,255,.9);
+    padding:14px 18px;background:rgba(255,255,255,.08);border-left:3px solid #7dcea0;border-radius:6px;
+    max-width:640px;
+  }
+  .profile-summary b{color:#fff;font-weight:600;}
+  .contact{
+    position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:22px;font-size:13.5px;
+  }
+  .contact-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.92);}
+  .contact-item svg{flex:0 0 18px;width:18px;height:18px;opacity:.9;}
+  .contact-item a{color:inherit;text-decoration:none;}
+  .contact-item a:hover{text-decoration:underline;}
+  .tags-row{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;position:relative;z-index:1;
+  }
+  .tag{
+    padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:500;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .tag svg{width:14px;height:14px;}
+
+  /* BODY */
+  .body{padding:28px 44px 36px;display:grid;grid-template-columns:1.45fr 1fr;gap:34px;}
+  @media (max-width:760px){
+    .body{grid-template-columns:1fr;gap:28px;padding:22px 22px 30px;}
+    .header{padding:26px 22px 22px;}
+    .contact{grid-template-columns:1fr;}
+  }
+  .section{margin-bottom:28px;}
+  .section:last-child{margin-bottom:0;}
+  .section-title{
+    display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:8px;
+    border-bottom:2px solid var(--primary-light);font-size:16px;font-weight:700;color:var(--primary-dark);
+  }
+  .section-title .ico{
+    display:inline-flex;width:30px;height:30px;background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;border-radius:8px;align-items:center;justify-content:center;
+  }
+  .section-title .ico svg{width:16px;height:16px;}
+  .section-title span.label{flex:1;letter-spacing:.5px;}
+  .section-title .deco{font-size:11px;color:var(--text-muted);font-weight:400;font-family:Manrope,sans-serif;letter-spacing:1px;}
+
+  .entry{margin-bottom:16px;}
+  .entry:last-child{margin-bottom:0;}
+  .entry-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .entry-title{font-size:14.5px;font-weight:600;color:var(--text);line-height:1.4;}
+  .entry-sub{font-size:12.5px;color:var(--text-soft);margin-top:3px;line-height:1.5;}
+  .entry-date{
+    font-family:Manrope,sans-serif;font-size:12px;font-weight:600;color:var(--accent);
+    padding:4px 10px;background:var(--primary-light);border-radius:6px;white-space:nowrap;flex:0 0 auto;
+  }
+  .gpa{color:var(--accent-2);font-weight:600;}
+  .bullet-list{list-style:none;margin-top:8px;}
+  .bullet-list li{
+    position:relative;padding-left:18px;font-size:13px;color:var(--text-soft);line-height:1.75;margin-bottom:5px;
+  }
+  .bullet-list li::before{
+    content:"";position:absolute;left:4px;top:9px;width:5px;height:5px;border-radius:50%;
+    background:var(--accent);
+  }
+  .course-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+  .course-tags .c{
+    font-size:11.5px;padding:3px 9px;border-radius:5px;background:var(--tag-bg);color:var(--primary-dark);font-weight:500;
+  }
+  .course-tags .c .score{color:var(--accent);font-weight:600;margin-left:2px;}
+
+  /* Paper */
+  .paper{
+    padding:12px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--accent-2);margin-bottom:10px;
+  }
+  .paper-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.55;}
+  .paper-meta{font-size:11.5px;color:var(--text-muted);margin-top:4px;font-family:Manrope,"Noto Sans SC",sans-serif;}
+  .paper-meta .q{
+    display:inline-block;padding:1px 7px;background:#fce4d6;color:#a04000;border-radius:4px;
+    font-weight:700;font-size:10.5px;margin-left:6px;letter-spacing:.5px;
+  }
+  .paper-meta .q.q2{background:#fdebd0;color:#7e5109;}
+  .paper-meta .q.q3{background:#eaf2fb;color:#1f4e79;}
+  .conf-note{font-size:12.5px;color:var(--text-soft);margin-top:6px;padding-left:2px;}
+
+  /* Skill */
+  .skill-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  .skill-item{
+    display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:var(--bg-soft);
+    border-radius:8px;border:1px solid var(--border);transition:all .2s;
+  }
+  .skill-item:hover{border-color:var(--accent-2);background:#fff;transform:translateY(-1px);}
+  .skill-item .s-ico{
+    flex:0 0 28px;width:28px;height:28px;background:linear-gradient(135deg,var(--primary-light),#f8fbfe);
+    color:var(--primary);border-radius:7px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--border);
+  }
+  .skill-item .s-ico svg{width:15px;height:15px;}
+  .skill-item .s-body{flex:1;}
+  .skill-item .s-name{font-size:13px;font-weight:600;color:var(--text);}
+  .skill-item .s-desc{font-size:11.5px;color:var(--text-muted);margin-top:2px;line-height:1.55;}
+  .skill-bar{margin-top:6px;height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+  .skill-bar .fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent-2));border-radius:3px;}
+
+  /* Project block (compact list for sidebar) */
+  .proj-list{list-style:none;}
+  .proj-list li{
+    padding:9px 12px;margin-bottom:7px;background:var(--bg-soft);border-radius:7px;
+    font-size:12.5px;color:var(--text-soft);line-height:1.55;position:relative;padding-left:28px;
+    border:1px solid var(--border);
+  }
+  .proj-list li::before{
+    content:"❖";position:absolute;left:10px;top:9px;color:var(--accent);font-size:11px;
+  }
+  .proj-list li .level{display:block;font-size:10.5px;color:var(--accent);font-weight:600;margin-bottom:2px;letter-spacing:.5px;}
+
+  /* Practice */
+  .practice-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;}
+  .practice-item .p-ico{
+    flex:0 0 26px;width:26px;height:26px;background:var(--primary-light);color:var(--primary);
+    border-radius:6px;display:flex;align-items:center;justify-content:center;
+  }
+  .practice-item .p-ico svg{width:13px;height:13px;}
+  .practice-item .p-body{flex:1;}
+  .practice-item .p-title{font-size:13px;font-weight:600;color:var(--text);}
+  .practice-item .p-desc{font-size:11.5px;color:var(--text-muted);margin-top:1px;line-height:1.5;}
+
+  .footer{
+    text-align:center;padding:14px 20px;background:var(--bg-soft);border-top:1px solid var(--border);
+    font-size:11px;color:var(--text-muted);font-family:Manrope,sans-serif;letter-spacing:1px;
+  }
+  .footer a{color:var(--accent);text-decoration:none;}
+
+  /* Print */
+  @media print{
+    body{padding:0;background:#fff;}
+    .page{box-shadow:none;border-radius:0;}
+    .header{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .skill-item,.paper,.proj-list li,.entry-head .entry-date{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="name-block">
+        <h1>王少辉</h1>
+        <!-- 页眉超链接：wangshaohui → 网页版简历地址（部署后替换此处 href） -->
+        <div class="name-en">
+          <a href="https://your-github.github.io/resume/王少辉_简历_原版.html" target="_blank" rel="noopener" title="点击查看简历网页版">
+            WANG SHAOHUI · PERSONAL RESUME
+          </a>
+        </div>
+        <div class="title-tag">
+          <span class="dot"></span>
+          <span>男 · 2001.05 · 运动健康AI产品经理</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-summary">
+      <b>一句话定位：</b>体育生中最懂AI的，程序员里最懂运动健康的——用数据科学赋能运动健康产品
+    </div>
+
+    <div class="contact">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a href="tel:17639647964">176 3964 7964（手机/微信）</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:2194712714@qq.com">2194712714@qq.com</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 3 3 5 6 5s6-2 6-5v-5"/></svg>
+        郑州大学 · 运动训练（硕士） · 2023.09-2026.06
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        期望：运动健康 / 可穿戴算法 / AI+体育
+      </div>
+    </div>
+
+    <div class="tags-row">
+      <span class="tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        运动健康领域
+      </span>
+      <span class="tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        编程与数据科学
+      </span>
+      <span class="tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M3 15h6"/><path d="M15 21v-6"/><path d="M21 9h-6"/><path d="M9 3v6"/></svg>
+        AI与智能体应用
+      </span>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <main class="body">
+
+    <!-- LEFT COLUMN -->
+    <section class="col-left">
+
+      <!-- Education -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 3 3 5 6 5s6-2 6-5v-5"/></svg></span>
+          <span class="label">教育背景</span>
+          <span class="deco">EDUCATION</span>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div>
+              <div class="entry-title">郑州大学 · 运动训练学 · <span style="color:var(--accent)">硕士</span></div>
+              <div class="entry-sub">研究方向：体质健康促进、运动表现提升、体育数据分析 · GPA <span class="gpa">3.89/4.3</span></div>
+            </div>
+            <span class="entry-date">2023.09 - 2026.06</span>
+          </div>
+          <div class="course-tags">
+            <span class="c">运动训练理论方法与监控<span class="score">96</span></span>
+            <span class="c">体育教学论<span class="score">93</span></span>
+            <span class="c">专业英语<span class="score">94</span></span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div>
+              <div class="entry-title">郑州大学 · 体育教育 · <span style="color:var(--accent-2)">学士</span></div>
+              <div class="entry-sub">GPA <span class="gpa">2.99/4.0</span></div>
+            </div>
+            <span class="entry-date">2019.09 - 2023.06</span>
+          </div>
+          <div class="course-tags">
+            <span class="c">运动训练学<span class="score">90</span></span>
+            <span class="c">运动技能学习与控制<span class="score">90</span></span>
+            <span class="c">篮球<span class="score">93</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+          <span class="label">工作经历</span>
+          <span class="deco">EXPERIENCE</span>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div>
+              <div class="entry-title">Suunto（颂拓） · 算法测试工程师</div>
+              <div class="entry-sub">可穿戴设备 · 运动健康算法全链路测试 · 流程标准化搭建</div>
+            </div>
+            <span class="entry-date">2026.07 - 至今</span>
+          </div>
+          <ul class="bullet-list">
+            <li>负责<b>心率、血氧、睡眠、运动模式、气压计</b>等可穿戴设备核心算法的测试用例设计与验证，搭建标准化测试流程，覆盖运动健康算法全链路。</li>
+            <li>基于真实运动数据对算法输出进行量化分析，发现并定位<b>心率检测、睡眠分期</b>等算法缺陷，协同算法团队完成修复验证。</li>
+            <li>与算法团队、产品团队协同，参与定义算法验收标准，明确各算法模块的<b>准确率、召回率</b>等核心评估指标。</li>
+            <li>建立算法性能评估体系，对比不同版本算法在关键指标上的表现差异，输出评估报告为产品迭代提供数据支撑。</li>
+            <li>将<b>AI智能体</b>引入测试工作流程，实现测试用例自动生成、缺陷报告整理与流程编排，显著提升测试效率，展现了将AI技术落地到实际业务场景的能力。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Research -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6"/><path d="M9 16h6"/><path d="M10 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="M13 2h-2v4h2z"/></svg></span>
+          <span class="label">科研成果</span>
+          <span class="deco">PUBLICATIONS</span>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Effects of three strength training methods on lower extremity strength, jump and sprint performance: A network meta-analysis</div>
+          <div class="paper-meta">Frontiers in Physiology · <b>JCR Q2</b><span class="q q2">Q2</span></div>
+          <div class="conf-note" style="margin-top:6px;">构建三种下肢力量训练方法的效果网络，为运动表现提升提供量化支持。</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Combined training outperforms single-form in improving lower extremity reactive strength index: A network meta-analysis</div>
+          <div class="paper-meta">Journal of Science in Sport and Exercise · <b>JCR Q3</b><span class="q q3">Q3</span></div>
+          <div class="conf-note" style="margin-top:6px;">首次系统比较组合训练方案与单一增强式训练对RSI（反应力量指数）的影响。</div>
+        </div>
+
+        <div class="conf-note" style="margin-top:10px;padding:8px 12px;background:var(--tag-bg);border-radius:6px;">
+          <b>学术会议：</b>全国体育科学大会、全国竞技体育科学大会、亚太运动与体育科学大会（APESS）
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="col-right">
+
+      <!-- Projects -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M7 3v4M12 3v4M17 3v4M7 17v4M12 17v4M17 17v4"/></svg></span>
+          <span class="label">项目经历</span>
+          <span class="deco">PROJECTS</span>
+        </div>
+        <ul class="proj-list">
+          <li>
+            <span class="level">教育部 · 人文社科项目</span>
+            健康中国行动背景下大学生体质健康危机及纾解策略研究
+          </li>
+          <li>
+            <span class="level">河南省 · 哲学社会科学规划项目</span>
+            河南省大学生体质健康网状干预及健康行为 RE-AIM 评价研究
+          </li>
+          <li>
+            <span class="level">教育部 · 产学合作协同育人项目</span>
+            体教融合背景下对提高学生体质健康的策略研究
+          </li>
+          <li>
+            <span class="level">郑州大学校级</span>
+            一流课程、教育教学改革项目等 <b>7项</b>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.09 6.26L20 9l-5 4.34L16.18 20 12 17.27 7.82 20 9 13.34 4 9l5.91-.74z"/></svg></span>
+          <span class="label">专业技能</span>
+          <span class="deco">SKILLS</span>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">可穿戴运动健康算法</div>
+              <div class="s-desc">心率 · 血氧 · 睡眠分期 · 运动模式识别</div>
+              <div class="skill-bar"><div class="fill" style="width:92%"></div></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">运动表现与体质健康评估</div>
+              <div class="s-desc">体能测评 · 健康风险识别 · 运动处方</div>
+              <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">Python & R · 统计建模</div>
+              <div class="s-desc">scikit-learn · tidyverse · meta · 机器学习</div>
+              <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-5"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">荟萃分析 (Meta-Analysis)</div>
+              <div class="s-desc">SPSS · Stata · 网状Meta · 系统评价</div>
+              <div class="skill-bar"><div class="fill" style="width:88%"></div></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">AI 智能体落地</div>
+              <div class="s-desc">自动化测试编排 · 缺陷报告生成</div>
+              <div class="skill-bar"><div class="fill" style="width:82%"></div></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="s-body">
+              <div class="s-name">篮球一级裁判员</div>
+              <div class="s-desc">专业执裁经验 · 规则精通</div>
+              <div class="skill-bar"><div class="fill" style="width:78%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice -->
+      <div class="section">
+        <div class="section-title">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span>
+          <span class="label">本硕实践经历</span>
+          <span class="deco">PRACTICE</span>
+        </div>
+        <div class="practice-item">
+          <div class="p-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="p-body">
+            <div class="p-title">兼职体育教师</div>
+            <div class="p-desc">本科期间担任体育教学，锻炼沟通表达能力</div>
+          </div>
+        </div>
+        <div class="practice-item">
+          <div class="p-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="p-body">
+            <div class="p-title">运动训练教练员</div>
+            <div class="p-desc">从事运动训练指导，培养管理协调能力</div>
+          </div>
+        </div>
+        <div class="practice-item">
+          <div class="p-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="p-body">
+            <div class="p-title">科研论文辅导</div>
+            <div class="p-desc">辅导完成论文数据分析与撰写，跨领域知识整合与表达</div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <div class="footer">
+    © 2026 WANG SHAOHUI · <a href="https://your-github.github.io/resume/王少辉_简历_原版.html" target="_blank">在线简历版本</a> · 更新日期 2026.09
+  </div>
+</div>
+</body>
+</html>
